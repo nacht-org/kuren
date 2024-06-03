@@ -1,8 +1,8 @@
 extern crate getopts;
-extern crate scraper;
+extern crate kuren;
 
 use getopts::Options;
-use scraper::{Html, Selector};
+use kuren::{Html, Selector};
 use std::env;
 use std::fs::{self, File};
 use std::io::{self, Read};
@@ -75,7 +75,7 @@ fn main() {
     if matches.opt_present("h") {
         print!(
             "{}",
-            opts.usage("Usage: scraper [options] SELECTOR [FILE ...]")
+            opts.usage("Usage: kuren [options] SELECTOR [FILE ...]")
         );
         return;
     }
@@ -86,8 +86,8 @@ fn main() {
             path.push("man1");
         }
         fs::create_dir_all(&path).unwrap();
-        path.push("scraper.1");
-        fs::write(&path, &include_bytes!("../scraper.1")[..]).unwrap();
+        path.push("kuren.1");
+        fs::write(&path, &include_bytes!("../kuren.1")[..]).unwrap();
         return;
     }
 

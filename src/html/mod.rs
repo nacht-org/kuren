@@ -62,12 +62,12 @@ impl Html {
     ///
     /// ```
     /// # extern crate html5ever;
-    /// # extern crate scraper;
+    /// # extern crate kuren;
     /// # extern crate tendril;
     /// # fn main() {
     /// # let document = "";
     /// use html5ever::driver::{self, ParseOpts};
-    /// use scraper::Html;
+    /// use kuren::Html;
     /// use tendril::TendrilSink;
     ///
     /// let parser = driver::parse_document(Html::new_document(), ParseOpts::default());

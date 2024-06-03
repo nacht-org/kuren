@@ -1,8 +1,8 @@
-extern crate scraper;
+extern crate kuren;
 
 use std::io::{self, Read, Write};
 
-use scraper::{Html, Selector};
+use kuren::{Html, Selector};
 
 fn main() {
     let mut input = String::new();

@@ -1,25 +1,25 @@
-# scraper
+# kuren
 
-[![crates.io](https://img.shields.io/crates/v/scraper?color=dark-green)][crate]
-[![downloads](https://img.shields.io/crates/d/scraper)][crate]
-[![test](https://github.com/causal-agent/scraper/actions/workflows/test.yml/badge.svg)][tests]
+[![crates.io](https://img.shields.io/crates/v/kuren?color=dark-green)][crate]
+[![downloads](https://img.shields.io/crates/d/kuren)][crate]
+[![test](https://github.com/causal-agent/kuren/actions/workflows/test.yml/badge.svg)][tests]
 
 HTML parsing and querying with CSS selectors.
 
-`scraper` is on [Crates.io][crate] and [GitHub][github].
+`kuren` is on [Crates.io][crate] and [GitHub][github].
 
-[crate]: https://crates.io/crates/scraper
-[github]: https://github.com/causal-agent/scraper
-[tests]: https://github.com/causal-agent/scraper/actions/workflows/test.yml
+[crate]: https://crates.io/crates/kuren
+[github]: https://github.com/causal-agent/kuren
+[tests]: https://github.com/causal-agent/kuren/actions/workflows/test.yml
 
-Scraper provides an interface to Servo's `html5ever` and `selectors` crates, for browser-grade parsing and querying.
+kuren provides an interface to Servo's `html5ever` and `selectors` crates, for browser-grade parsing and querying.
 
 ## Examples
 
 ### Parsing a document
 
 ```rust
-use scraper::Html;
+use kuren::Html;
 
 let html = r#"
     <!DOCTYPE html>
@@ -34,21 +34,21 @@ let document = Html::parse_document(html);
 ### Parsing a fragment
 
 ```rust
-use scraper::Html;
+use kuren::Html;
 let fragment = Html::parse_fragment("<h1>Hello, <i>world!</i></h1>");
 ```
 
 ### Parsing a selector
 
 ```rust
-use scraper::Selector;
+use kuren::Selector;
 let selector = Selector::parse("h1.foo").unwrap();
 ```
 
 ### Selecting elements
 
 ```rust
-use scraper::{Html, Selector};
+use kuren::{Html, Selector};
 
 let html = r#"
     <ul>
@@ -69,7 +69,7 @@ for element in fragment.select(&selector) {
 ### Selecting descendent elements
 
 ```rust
-use scraper::{Html, Selector};
+use kuren::{Html, Selector};
 
 let html = r#"
     <ul>
@@ -92,7 +92,7 @@ for element in ul.select(&li_selector) {
 ### Accessing element attributes
 
 ```rust
-use scraper::{Html, Selector};
+use kuren::{Html, Selector};
 
 let fragment = Html::parse_fragment(r#"<input name="foo" value="bar">"#);
 let selector = Selector::parse(r#"input[name="foo"]"#).unwrap();
@@ -104,7 +104,7 @@ assert_eq!(Some("bar"), input.value().attr("value"));
 ### Serializing HTML and inner HTML
 
 ```rust
-use scraper::{Html, Selector};
+use kuren::{Html, Selector};
 
 let fragment = Html::parse_fragment("<h1>Hello, <i>world!</i></h1>");
 let selector = Selector::parse("h1").unwrap();
@@ -118,7 +118,7 @@ assert_eq!("Hello, <i>world!</i>", h1.inner_html());
 ### Accessing descendent text
 
 ```rust
-use scraper::{Html, Selector};
+use kuren::{Html, Selector};
 
 let fragment = Html::parse_fragment("<h1>Hello, <i>world!</i></h1>");
 let selector = Selector::parse("h1").unwrap();
@@ -133,7 +133,7 @@ assert_eq!(vec!["Hello, ", "world!"], text);
 
 ```rust
 use html5ever::tree_builder::TreeSink;
-use scraper::{Html, Selector};
+use kuren::{Html, Selector};
 
 let html = "<html><body>hello<p class=\"hello\">REMOVE ME</p></body></html>";
 let selector = Selector::parse(".hello").unwrap();

@@ -1,11 +1,11 @@
 //! HTML parsing and querying with CSS selectors.
 //!
-//! `scraper` is on [Crates.io][crate] and [GitHub][github].
+//! `kuren` is on [Crates.io][crate] and [GitHub][github].
 //!
-//! [crate]: https://crates.io/crates/scraper
-//! [github]: https://github.com/programble/scraper
+//! [crate]: https://crates.io/crates/kuren
+//! [github]: https://github.com/programble/kuren
 //!
-//! Scraper provides an interface to Servo's `html5ever` and `selectors` crates, for browser-grade
+//! kuren provides an interface to Servo's `html5ever` and `selectors` crates, for browser-grade
 //! parsing and querying.
 //!
 //! # Examples
@@ -13,7 +13,7 @@
 //! ## Parsing a document
 //!
 //! ```
-//! use scraper::Html;
+//! use kuren::Html;
 //!
 //! let html = r#"
 //!     <!DOCTYPE html>
@@ -28,21 +28,21 @@
 //! ## Parsing a fragment
 //!
 //! ```
-//! use scraper::Html;
+//! use kuren::Html;
 //! let fragment = Html::parse_fragment("<h1>Hello, <i>world!</i></h1>");
 //! ```
 //!
 //! ## Parsing a selector
 //!
 //! ```
-//! use scraper::Selector;
+//! use kuren::Selector;
 //! let selector = Selector::parse("h1.foo").unwrap();
 //! ```
 //!
 //! ## Selecting elements
 //!
 //! ```
-//! use scraper::{Html, Selector};
+//! use kuren::{Html, Selector};
 //!
 //! let html = r#"
 //!     <ul>
@@ -63,7 +63,7 @@
 //! ## Selecting descendent elements
 //!
 //! ```
-//! use scraper::{Html, Selector};
+//! use kuren::{Html, Selector};
 //!
 //! let html = r#"
 //!     <ul>
@@ -86,7 +86,7 @@
 //! ## Accessing element attributes
 //!
 //! ```
-//! use scraper::{Html, Selector};
+//! use kuren::{Html, Selector};
 //!
 //! let fragment = Html::parse_fragment(r#"<input name="foo" value="bar">"#);
 //! let selector = Selector::parse(r#"input[name="foo"]"#).unwrap();
@@ -98,7 +98,7 @@
 //! ## Serializing HTML and inner HTML
 //!
 //! ```
-//! use scraper::{Html, Selector};
+//! use kuren::{Html, Selector};
 //!
 //! let fragment = Html::parse_fragment("<h1>Hello, <i>world!</i></h1>");
 //! let selector = Selector::parse("h1").unwrap();
@@ -112,7 +112,7 @@
 //! ## Accessing descendent text
 //!
 //! ```
-//! use scraper::{Html, Selector};
+//! use kuren::{Html, Selector};
 //!
 //! let fragment = Html::parse_fragment("<h1>Hello, <i>world!</i></h1>");
 //! let selector = Selector::parse("h1").unwrap();

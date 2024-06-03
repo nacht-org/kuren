@@ -11,7 +11,7 @@ use crate::{
 /// The mainly enables writing helper functions which are generic over [`Html`] and [`ElementRef`], e.g.
 ///
 /// ```
-/// use scraper::{selectable::Selectable, selector::Selector};
+/// use kuren::{selectable::Selectable, selector::Selector};
 ///
 /// fn text_of_first_match<'a, S>(selectable: S, selector: &Selector) -> Option<String>
 /// where

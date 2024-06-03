@@ -91,7 +91,7 @@ impl<'a> ElementRef<'a> {
     /// # Example
     ///
     /// ```
-    /// # use scraper::Html;
+    /// # use kuren::Html;
     /// let fragment = Html::parse_fragment("foo<span>bar</span><a>baz</a>qux");
     ///
     /// let children = fragment.root_element().child_elements().map(|element| element.value().name()).collect::<Vec<_>>();
@@ -106,7 +106,7 @@ impl<'a> ElementRef<'a> {
     /// # Example
     ///
     /// ```
-    /// # use scraper::Html;
+    /// # use kuren::Html;
     /// let fragment = Html::parse_fragment("foo<span><b>bar</b></span><a><i>baz</i></a>qux");
     ///
     /// let descendants = fragment.root_element().descendent_elements().map(|element| element.value().name()).collect::<Vec<_>>();
