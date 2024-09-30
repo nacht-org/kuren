@@ -1,4 +1,4 @@
-# kuren
+# Kuren
 
 [![crates.io](https://img.shields.io/crates/v/kuren?color=dark-green)][crate]
 [![downloads](https://img.shields.io/crates/d/kuren)][crate]

@@ -177,7 +177,7 @@ checksum = "49f1f14873335454500d59611f1cf4a4b0f786f9ac11f4312a78e4cf2566695b"
 
 [[package]]
 name = "kuren"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "ahash",
  "cssparser",
@@ -185,7 +185,6 @@ dependencies = [
  "getopts",
  "html5ever",
  "indexmap",
- "once_cell",
  "selectors",
  "tendril",
 ]
@@ -434,20 +433,6 @@ name = "scopeguard"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "94143f37725109f92c262ed2cf5e59bce7498c01bcc1502d7b9afe439a4e9f49"
-
-[[package]]
-name = "scraper"
-version = "0.20.0"
-dependencies = [
- "ahash",
- "cssparser",
- "ego-tree",
- "getopts",
- "html5ever",
- "indexmap",
- "selectors",
- "tendril",
-]
 
 [[package]]
 name = "selectors"

@@ -1,5 +1,5 @@
 [package]
-name = "scraper"
+name = "kuren"
 version = "0.20.0"
 edition = "2021"
 
@@ -9,7 +9,7 @@ keywords = ["html", "css", "selector", "scraping"]
 authors = ["June McEnroe <june@causal.agency>"]
 license = "ISC"
 
-repository = "https://github.com/causal-agent/scraper"
+repository = "https://github.com/causal-agent/kuren"
 readme = "README.md"
 
 [dependencies]
@@ -33,6 +33,6 @@ atomic = []
 errors = []
 
 [[bin]]
-name = "scraper"
+name = "kuren"
 path = "src/main.rs"
 required-features = ["main"]
