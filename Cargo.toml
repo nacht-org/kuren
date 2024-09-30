@@ -2,14 +2,15 @@
 name = "kuren"
 version = "0.19.0"
 edition = "2021"
-
 description = "HTML parsing and querying with CSS selectors"
 keywords = ["html", "css", "selector", "scraping"]
-
-authors = ["June McEnroe <june@causal.agency>"]
+authors = [
+    "June McEnroe <june@causal.agency>",
+    "Mohamed Haisham <mhaisham79@gmail.com>",
+]
 license = "ISC"
 
-repository = "https://github.com/causal-agent/kuren"
+repository = "https://github.com/nacht-org/kuren"
 readme = "README.md"
 
 [dependencies]
