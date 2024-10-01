@@ -5,11 +5,11 @@ use std::borrow::Cow;
 use std::fmt;
 use std::iter::FusedIterator;
 
-use kuren_tree::iter::Nodes;
-use kuren_tree::Tree;
 use html5ever::serialize::SerializeOpts;
 use html5ever::tree_builder::QuirksMode;
 use html5ever::{driver, serialize, QualName};
+use kuren_tree::iter::Nodes;
+use kuren_tree::Tree;
 use selectors::NthIndexCache;
 use tendril::TendrilSink;
 
@@ -198,6 +198,7 @@ impl<'a, 'b> DoubleEndedIterator for Select<'a, 'b> {
 
 impl FusedIterator for Select<'_, '_> {}
 
+mod modify;
 mod serializable;
 mod tree_sink;
 
