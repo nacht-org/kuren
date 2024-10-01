@@ -4,9 +4,9 @@ use std::fmt::{self, Debug};
 use std::iter::FusedIterator;
 use std::ops::Deref;
 
-use ego_tree::iter::{Edge, Traverse};
-use ego_tree::NodeRef;
 use html5ever::serialize::{serialize, SerializeOpts, TraversalScope};
+use kuren_tree::iter::{Edge, Traverse};
+use kuren_tree::NodeRef;
 use selectors::NthIndexCache;
 
 use crate::node::Element;

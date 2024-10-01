@@ -5,8 +5,8 @@ use std::borrow::Cow;
 use std::fmt;
 use std::iter::FusedIterator;
 
-use ego_tree::iter::Nodes;
-use ego_tree::Tree;
+use kuren_tree::iter::Nodes;
+use kuren_tree::Tree;
 use html5ever::serialize::SerializeOpts;
 use html5ever::tree_builder::QuirksMode;
 use html5ever::{driver, serialize, QualName};

@@ -89,12 +89,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ego-tree"
-version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7c6ba7d4eec39eaa9ab24d44a0e73a7949a1095a8b3f3abb11eddf27dbb56a53"
-
-[[package]]
 name = "equivalent"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -181,12 +175,20 @@ version = "0.20.0"
 dependencies = [
  "ahash",
  "cssparser",
- "ego-tree",
  "getopts",
  "html5ever",
  "indexmap",
+ "kuren-tree",
  "selectors",
  "tendril",
+]
+
+[[package]]
+name = "kuren-tree"
+version = "0.9.0"
+dependencies = [
+ "serde",
+ "serde_test",
 ]
 
 [[package]]
@@ -471,6 +473,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "serde_test"
+version = "1.0.177"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7f901ee573cab6b3060453d2d5f0bae4e6d628c23c0a962ff9b5f1d7c8d4f1ed"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
